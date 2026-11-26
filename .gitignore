@@ -1,0 +1,4 @@
+dist/
+*.zip
+*.jks
+.DS_Store

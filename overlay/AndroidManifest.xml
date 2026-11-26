@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="local.poco.ncmtether.overlay">
+    <overlay android:targetPackage="com.miui.rom" android:isStatic="true" android:priority="999"/>
+    <application android:hasCode="false"/>
+</manifest>

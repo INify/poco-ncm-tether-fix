@@ -3,4 +3,4 @@ name=POCO F8 Ultra NCM USB tethering fix
 version=v1.4
 versionCode=5
 author=local build
-description=Fixes NCM USB tethering on HyperOS: removes a USB HAL race and makes Settings recognise the ncm0 interface.
+description=NCM USB tethering fix. Tested only on POCO F8 Ultra HyperOS OS4.0.1.0.XPMEUXM (EEA, XMS D01).

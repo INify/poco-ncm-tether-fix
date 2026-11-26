@@ -5,6 +5,16 @@ A KernelSU/Magisk module that makes USB tethering on the POCO F8 Ultra
 supports natively with no driver, and fixes the HyperOS bugs that otherwise
 break it.
 
+> [!WARNING]
+> **Tested on one build only:** POCO F8 Ultra (`myron_eea`, model 25102PCBEG),
+> HyperOS **OS4.0.1.0.XPMEUXM** (EEA), XMS **D01**, Android 17, rooted with
+> KernelSU 4.3.0 + NoMount.
+>
+> **Not tested:** HyperOS 3, the Global (non-EEA) build, the China build, any
+> other HyperOS 4 version, and other phones. On those, the installer will most
+> likely refuse because the USB HAL hash differs. If it does install, the
+> offsets and the overlay slot may not match. Use at your own risk.
+
 ## What's wrong on stock
 
 1. **Tethering uses RNDIS.** Android's tethering service is set to RNDIS,

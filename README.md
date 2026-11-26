@@ -67,6 +67,21 @@ networksetup -createnetworkservice "POCO F8 Ultra" "POCO F8 Ultra"
 
 Download speed is then limited by the mobile network, not USB 2.
 
+## Windows
+
+- **Windows 11:** the built-in NCM driver loads on its own.
+- **Windows 10 22H2:** the driver (`UsbNcm.sys`) is included but isn't picked
+  automatically. Tested and working after picking it once:
+  1. Turn USB tethering on with the phone plugged in.
+  2. In Device Manager, open the phone's unknown device, then choose
+     **Update driver → Browse my computer → Let me pick from a list** →
+     **Network adapters → Microsoft → UsbNcm Host Device**.
+  3. Windows usually remembers this. If the phone is plugged into a different
+     USB port, you may need to repeat it.
+- **Alternative:** Windows also supports RNDIS natively. For a Windows-only
+  session, `su -c settings put global tether_force_usb_functions 0` switches
+  the phone back to RNDIS until the next reboot.
+
 ## After a HyperOS update
 
 The HAL hash will most likely change. The module then skips the HAL patch
